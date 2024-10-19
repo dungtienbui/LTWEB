@@ -1,0 +1,281 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2638
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Monaco;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red93\green108\blue121;\red255\green255\blue255;\red0\green0\blue0;
+\red155\green35\blue147;\red100\green56\blue32;\red196\green26\blue22;\red11\green79\blue121;\red15\green104\blue160;
+\red28\green70\blue74;\red50\green109\blue116;\red28\green0\blue207;\red108\green54\blue169;}
+{\*\expandedcolortbl;;\csgenericrgb\c36526\c42188\c47515;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c0\c0\c0\c85000;
+\csgenericrgb\c60759\c13753\c57628;\csgenericrgb\c39147\c22031\c12446;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c4314\c30980\c47451;\csgenericrgb\c5882\c40784\c62745;
+\csgenericrgb\c10981\c27276\c28869;\csgenericrgb\c19418\c42935\c45455;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c42190\c21278\c66379;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww24520\viewh12840\viewkind0
+\deftab593
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 //  Descarter\cf4 \
+\cf2 //\cf4 \
+\cf2 //  Created by B\'d9I TI
+\f1 \uc0\u7870 
+\f0 N D\uc0\u360 NG\cf4 \
+\cf2 //
+\f2\b \cf5 \
+\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f0\b0 \cf6 #include \cf7 <stdio.h>\cf4 \
+\cf6 #include \cf7 <iostream>\cf4 \
+\cf6 #include \cf7 <cmath>\cf4 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f2\b \cf5 using
+\f0\b0 \cf4  
+\f2\b \cf5 namespace
+\f0\b0 \cf4  \cf8 std\cf4 ;
+\f2\b \cf5 \
+\
+\
+//Class descarter\
+class
+\f0\b0 \cf4  \cf8 Descartes\cf4 \{\
+
+\f2\b \cf5 private
+\f0\b0 \cf4 :\
+    
+\f2\b \cf5 int
+\f0\b0 \cf4  x;\
+    
+\f2\b \cf5 int
+\f0\b0 \cf4  y;\
+
+\f2\b \cf5 public
+\f0\b0 \cf4 :\
+    \cf9 Descartes\cf4 (); \cf2 // constructer defaul\cf4 \
+    \cf9 Descartes\cf4 (
+\f2\b \cf5 int
+\f0\b0 \cf4 ); \cf2 // constructer\cf4 \
+    \cf9 Descartes\cf4 (
+\f2\b \cf5 int
+\f0\b0 \cf4 , 
+\f2\b \cf5 int
+\f0\b0 \cf4 ); \cf2 // constructer\cf4 \
+    \
+    
+\f2\b \cf5 int
+\f0\b0 \cf4  \cf9 getX\cf4 (); \cf2 // lay toa do Ox\cf4 \
+    
+\f2\b \cf5 int
+\f0\b0 \cf4  \cf9 getY\cf4 (); \cf2 // lay toa do Oy\cf4 \
+    
+\f2\b \cf5 void
+\f0\b0 \cf4  \cf9 setX\cf4 (
+\f2\b \cf5 int
+\f0\b0 \cf4 ); \cf2 // thiet lap Ox\cf4 \
+    
+\f2\b \cf5 void
+\f0\b0 \cf4  \cf9 setY\cf4 (
+\f2\b \cf5 int
+\f0\b0 \cf4 ); \cf2 // thiet lap Oy\cf4 \
+    \
+    
+\f2\b \cf5 void
+\f0\b0 \cf4  \cf9 set\cf4 (); \cf2 // thay doi toa do diem, khong co tham so truyen vao => set ve goc toa do (0;0)\cf4 \
+    
+\f2\b \cf5 void
+\f0\b0 \cf4  \cf9 set\cf4 (
+\f2\b \cf5 int
+\f0\b0 \cf4 ); \cf2 // thay doi toa do diem, co mot tham so w => set toa do x = y = w => (w;w)\cf4 \
+    
+\f2\b \cf5 void
+\f0\b0 \cf4  \cf9 set\cf4 (
+\f2\b \cf5 int
+\f0\b0 \cf4 , 
+\f2\b \cf5 int
+\f0\b0 \cf4 ); \cf2 // thay doi toa do diem, co hai tham so x, y => x = x, y = y => (x;y)\cf4 \
+    \
+    
+\f2\b \cf5 void
+\f0\b0 \cf4  \cf9 printDes\cf4 (); \cf2 // in ra toa do diem the cau truc (x,y)\cf4 \
+    \
+    
+\f2\b \cf5 double
+\f0\b0 \cf4  \cf9 distancePoint\cf4 (\cf10 Descartes\cf4 ); \cf2 // tra ve khoang cach hai diem\cf4 \
+    \
+\};\
+// define functions\
+\cf9 Descartes\cf4 ::\cf9 Descartes\cf4 ()\{\
+    \cf11 x\cf4  = \cf12 0\cf4 ;\
+    \cf11 y\cf4  = \cf12 0\cf4 ;\
+\}\
+\cf10 Descartes\cf4 ::\cf9 Descartes\cf4 (
+\f2\b \cf5 int
+\f0\b0 \cf4  w)\{\
+    \cf11 x\cf4  = w;\
+    \cf11 y\cf4  = w;\
+\}\
+\cf10 Descartes\cf4 ::\cf9 Descartes\cf4 (
+\f2\b \cf5 int
+\f0\b0 \cf4  x, 
+\f2\b \cf5 int
+\f0\b0 \cf4  y)\{\
+    
+\f2\b \cf5 this
+\f0\b0 \cf4 ->\cf11 x\cf4  = x;\
+    
+\f2\b \cf5 this
+\f0\b0 \cf4 ->\cf11 y\cf4  = y;\
+\}\
+\
+
+\f2\b \cf5 int
+\f0\b0 \cf4  \cf10 Descartes\cf4 ::\cf9 getX\cf4 ()\{\
+    
+\f2\b \cf5 return
+\f0\b0 \cf4  
+\f2\b \cf5 this
+\f0\b0 \cf4 ->\cf11 x\cf4 ;\
+\}\
+
+\f2\b \cf5 int
+\f0\b0 \cf4  \cf10 Descartes\cf4 ::\cf9 getY\cf4 ()\{\
+    
+\f2\b \cf5 return
+\f0\b0 \cf4  
+\f2\b \cf5 this
+\f0\b0 \cf4 ->\cf11 y\cf4 ;\
+\}\
+
+\f2\b \cf5 void
+\f0\b0 \cf4  \cf10 Descartes\cf4 ::\cf9 setX\cf4 (
+\f2\b \cf5 int
+\f0\b0 \cf4  x)\{\
+    
+\f2\b \cf5 this
+\f0\b0 \cf4 ->\cf11 x\cf4  = x;\
+\}\
+
+\f2\b \cf5 void
+\f0\b0 \cf4  \cf10 Descartes\cf4 ::\cf9 setY\cf4 (
+\f2\b \cf5 int
+\f0\b0 \cf4  y)\{\
+    
+\f2\b \cf5 this
+\f0\b0 \cf4 ->\cf11 y\cf4  = y;\
+\}\
+\
+
+\f2\b \cf5 void
+\f0\b0 \cf4  \cf10 Descartes\cf4 ::\cf9 printDes\cf4 ()\{\
+    \cf13 cout\cf4  << \cf7 "("\cf4  << \cf11 x\cf4  << \cf7 ";"\cf4  << \cf11 y\cf4  << \cf7 ")"\cf4 ;\
+\}\
+\
+
+\f2\b \cf5 void
+\f0\b0 \cf4  \cf10 Descartes\cf4 ::\cf9 set\cf4 ()\{\
+    \cf11 x\cf4  = \cf12 0\cf4 ;\
+    \cf11 y\cf4  = \cf12 0\cf4 ;\
+\}\
+
+\f2\b \cf5 void
+\f0\b0 \cf4  \cf10 Descartes\cf4 ::\cf9 set\cf4 (
+\f2\b \cf5 int
+\f0\b0 \cf4  w)\{\
+    \cf11 x\cf4  = w;\
+    \cf11 y\cf4  = w;\
+\}\
+
+\f2\b \cf5 void
+\f0\b0 \cf4  \cf10 Descartes\cf4 ::\cf9 set\cf4 (
+\f2\b \cf5 int
+\f0\b0 \cf4  x, 
+\f2\b \cf5 int
+\f0\b0 \cf4  y)\{\
+    
+\f2\b \cf5 this
+\f0\b0 \cf4 ->\cf11 x\cf4  = x;\
+    
+\f2\b \cf5 this
+\f0\b0 \cf4 ->\cf11 y\cf4  = y;\
+\}\
+\
+
+\f2\b \cf5 double
+\f0\b0 \cf4  \cf10 Descartes\cf4 ::\cf9 distancePoint\cf4 (\cf10 Descartes\cf4  other)\{\
+    
+\f2\b \cf5 return
+\f0\b0 \cf4  \cf13 sqrt\cf4 (\cf13 pow\cf4 (
+\f2\b \cf5 this
+\f0\b0 \cf4 ->\cf11 x\cf4  - other.\cf11 x\cf4 , \cf12 2\cf4 ) + \cf13 pow\cf4 (
+\f2\b \cf5 this
+\f0\b0 \cf4 ->\cf11 y\cf4  - other.\cf11 y\cf4 , \cf12 2\cf4 ));\
+\}
+\f2\b \cf5 \
+//Class descarter\
+\
+\
+\
+\
+int
+\f0\b0 \cf4  \cf9 main\cf4 () \{\
+    \cf2 // insert code here...\cf4 \
+    \cf13 cout\cf4  << \cf7 "Hello, World!\\n"\cf4 ;\
+    \
+    \cf2 //Using class Descarter\cf4 \
+    \
+    \cf10 Descartes\cf4  point;\
+    \cf13 cout\cf4  << \cf7 "Toa do cua point: "\cf4 ;\
+    point.\cf11 printDes\cf4 ();\
+    \cf13 cout\cf4  << \cf13 endl\cf4 ;\
+    \cf13 cout\cf4  << \cf7 "Thiet lap toa do cua point theo tung truc Ox = 100, Oy = 99:"\cf4  << \cf13 endl\cf4 ;\
+    point.\cf11 setX\cf4 (\cf12 100\cf4 );\
+    point.\cf11 setY\cf4 (\cf12 99\cf4 );\
+    \cf13 cout\cf4  << \cf7 "Toa do cua point theo Ox: "\cf4  << point.\cf11 getX\cf4 () << \cf13 endl\cf4 ;\
+    \cf13 cout\cf4  << \cf7 "Toa do cua point theo Oy: "\cf4  << point.\cf11 getY\cf4 () << \cf13 endl\cf4 ;\
+\
+    \
+    \cf10 Descartes\cf4  a;\
+    \cf13 cout\cf4  << \cf7 "Toa do cua a: "\cf4 ;\
+    a.\cf11 printDes\cf4 ();\
+    \cf13 cout\cf4  << \cf13 endl\cf4 ;\
+    \
+    \cf10 Descartes\cf4  b(\cf12 3\cf4 );\
+    \cf13 cout\cf4  << \cf7 "Toa do cua b: "\cf4 ;\
+    b.\cf11 printDes\cf4 ();\
+    \cf13 cout\cf4  << \cf13 endl\cf4 ;\
+    \
+    \cf10 Descartes\cf4  c(\cf12 999\cf4 , \cf12 1000\cf4 );\
+    \cf13 cout\cf4  << \cf7 "Toa do cua c: "\cf4 ;\
+    c.\cf11 printDes\cf4 ();\
+    \cf13 cout\cf4  << \cf13 endl\cf4 ;\
+    \
+    \cf13 cout\cf4  << \cf7 "Thay doi toa do cua a (Ox = 10, Oy = 10) bang lenh a.set(10), toa do cua a: "\cf4 ;\
+    a.\cf11 set\cf4 (\cf12 10\cf4 );\
+    a.\cf11 printDes\cf4 ();\
+    \cf13 cout\cf4  << \cf13 endl\cf4 ;\
+    \
+    \cf13 cout\cf4  << \cf7 "Thay doi toa do cua b (Ox = -999, Oy = -1000) bang lenh b.set(-999, -1000), toa do cua b: "\cf4 ;\
+    b.\cf11 set\cf4 (-\cf12 999\cf4 , -\cf12 1000\cf4 );\
+    b.\cf11 printDes\cf4 ();\
+    \cf13 cout\cf4  << \cf13 endl\cf4 ;\
+    \
+    \cf13 cout\cf4  << \cf7 "Thay doi toa do cua c (Ox = 0, Oy = 0) bang lenh c.set(), toa do cua c: "\cf4 ;\
+    c.\cf11 set\cf4 ();\
+    c.\cf11 printDes\cf4 ();\
+    \cf13 cout\cf4  << \cf13 endl\cf4 ;\
+    \
+    \
+    \cf13 cout\cf4  << \cf7 "a: "\cf4 ;\
+    a.\cf11 printDes\cf4 ();\
+    \cf13 cout\cf4  << \cf13 endl\cf4 ;\
+    \cf13 cout\cf4  << \cf7 "b: "\cf4 ;\
+    b.\cf11 printDes\cf4 ();\
+    \cf13 cout\cf4  << \cf13 endl\cf4 ;\
+    \cf13 cout\cf4  << \cf7 "Khoang cach hai diem a va b: "\cf4 ;\
+    \cf13 cout\cf4  << a.\cf11 distancePoint\cf4 (c);\
+    \cf13 cout\cf4  << \cf13 endl\cf4 ;\
+    \
+    \
+    \
+    \
+    
+\f2\b \cf5 return
+\f0\b0 \cf4  \cf12 0\cf4 ;\
+\}}
